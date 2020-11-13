@@ -29,10 +29,10 @@ int main() {
 	for(it = m.begin();it!=m.end();it++)
 	{
 		if(it->second > 1)
-			{
-			cout<<"Repeated strings are:- "<<it->first<<" ";
-		cout<<endl;
-		}
+	         {
+	             cout<<"Repeated strings are:- "<<it->first<<" ";
+		     cout<<endl;
+		  }
 	}
 
 	return 0;
