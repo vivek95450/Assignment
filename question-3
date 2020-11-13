@@ -1,0 +1,41 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int findDepth(const string &str)
+{
+	stack<char> s;
+	int depth = 0;
+	int maxDepth = -1;
+	for(int i = 0;i<str.size();i++)
+	{
+		if(str[i] == '(')
+		{
+			s.push('(');
+			depth++;
+			if(depth > maxDepth)
+				maxDepth = depth;
+		}
+		else if(str[i] == ')')
+		{
+			if(s.empty())
+				return -1;
+			s.pop();
+			depth--;
+		}
+	}
+	if(!s.empty())
+		return -1;
+		
+return maxDepth;
+}
+
+int main() {
+	
+	string input;
+	cout<<"Enter the string: ";
+	cin>>input;
+	
+	cout<<"Depth is " <<findDepth(input);
+	return 0;
+}
