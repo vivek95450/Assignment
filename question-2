@@ -6,6 +6,7 @@ using namespace std;
 int main() {
 	
 	string str = "i am senior software developer. i work in software industry.";
+	cout<<"Input string is : "<<str<<endl;
 	map<string,int> m;
 	string temp = "";
 	for(int i = 0;i<str.size();i++)
